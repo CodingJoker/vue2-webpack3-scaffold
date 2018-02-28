@@ -1,0 +1,17 @@
+{
+  "presets": [
+    ["env",{
+      "target": [
+        "last 5 versions",
+        "safari >= 7",
+        "Android >= 5",
+        "Ios >= 8"
+      ],
+      "modules":false,
+      "useBuiltIns":"usages"
+    }],
+    "stage-0"
+  ],
+  "plugins": ["lodash"],
+  "comments": true
+}

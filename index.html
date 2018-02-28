@@ -1,0 +1,32 @@
+<% if (htmlWebpackPlugin.options.env == 'local') {%>
+<html>
+<% } else {%>
+<html manifest="/build/gad_mobile_manifest.appcache">
+<% } %>
+<head>
+    <title>GAD社区</title>
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+    <link rel="dns-prefetch" href="http://gad.qpic.cn">
+    <link rel="dns-prefetch" href="http://gadimg-10045137.image.myqcloud.com">
+</head>
+<body>
+<div id="app"></div>
+<noscript>
+    很抱歉，您的浏览器暂不支持Javascript语言。
+</noscript>
+<script type="text/javascript">
+    if ('scrollRestoration' in history) {
+        history.scrollRestoration = 'manual';
+    }else{
+        window.onunload= () => window.scrollTo(0,0);
+    }
+</script>
+<!--<script src="//cdn.jsdelivr.net/npm/eruda"></script>-->
+<!--<script>eruda.init();</script>-->
+</body>
+</html>

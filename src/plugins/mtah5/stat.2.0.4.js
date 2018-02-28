@@ -1,0 +1,2 @@
+!function () {var _mtac = {"performanceMonitor":1};var mta = document.createElement("script");mta.src = "http://pingjs.qq.com/h5/stats.js?v2.0.4";mta.setAttribute("name", "MTAH5");mta.setAttribute("sid", "500088404");mta.setAttribute("cid", "500389525");var s = document.getElementsByTagName("script")[0];s.parentNode.insertBefore(mta, s);}(window);
+window.MtaH5 === undefined && (window.MtaH5 = {clickShare: function(){}, clickStat: function(){}, hack: function(){}, pgv: function(){}});
