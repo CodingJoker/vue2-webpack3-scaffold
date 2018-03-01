@@ -68,7 +68,7 @@
     // 要求使用模板字面量而非字符串连接
     "prefer-template":1,
     //强制要求花括号属性之间换行一致性
-    "object-curly-newline": ["error", { "minProperties": 1 }],
+//    "object-curly-newline": ["error", { "minProperties": 1 }],
     // 要求使用箭头函数作为回调
     "prefer-arrow-callback":1,
     // 要求使用 const 声明那些声明后不再被修改的变量
