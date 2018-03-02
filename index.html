@@ -4,7 +4,7 @@
 <html manifest="<%= htmlWebpackPlugin.options.manifestPath %>gad_mobile_manifest.appcache">
 <% } %>
 <head>
-    <title>GAD社区</title>
+    <title>vue2-webpack3-scaffold</title>
     <meta charset="utf-8">
     <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
     <meta content="yes" name="apple-mobile-web-app-capable">
@@ -17,14 +17,21 @@
 <body>
 <div id="app"></div>
 <noscript>
-    很抱歉，您的浏览器暂不支持Javascript语言。
+    很抱歉，您的浏览器暂不支持Javascrip t语言。
 </noscript>
 <script type="text/javascript">
-    if ('scrollRestoration' in history) {
-        history.scrollRestoration = 'manual';
-    }else{
-        window.onunload= () => window.scrollTo(0,0);
-    }
+    (function(){
+        if ('scrollRestoration' in history) {
+            history.scrollRestoration = 'manual';
+        }else{
+            window.onunload= () => window.scrollTo(0,0);
+        }
+    })();
+    (function() {
+        if('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/service-worker.js');
+        }
+    })();
 </script>
 <!--<script src="//cdn.jsdelivr.net/npm/eruda"></script>-->
 <!--<script>eruda.init();</script>-->

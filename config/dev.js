@@ -26,9 +26,7 @@ let config = Object.assign({}, baseConfig, {
             template: 'index.html',
             env: 'local',
             inject: true
-        }),
-        // new webpack.HotModuleReplacementPlugin(),
-        // new webpack.NoErrorsPlugin()
+        })
     ],
     module: defaultSettings.getDefaultModules(),
 });
