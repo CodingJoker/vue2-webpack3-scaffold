@@ -71,6 +71,6 @@ module.exports = {
     buildPath:buildPath,
     debugJs: path.resolve(srcPath , 'debug.js'),
     onlineJs: path.resolve(srcPath , 'online.js'),
-    publicPath: '//yourCdnConfg/',
+    publicPath: '//localhost/',
     getDefaultModules: getDefaultModules
 };

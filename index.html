@@ -1,7 +1,7 @@
 <% if (htmlWebpackPlugin.options.env == 'local') {%>
 <html>
 <% } else {%>
-<html manifest="/build/gad_mobile_manifest.appcache">
+<html manifest="<%= htmlWebpackPlugin.options.manifestPath %>gad_mobile_manifest.appcache">
 <% } %>
 <head>
     <title>GAD社区</title>

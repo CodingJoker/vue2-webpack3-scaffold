@@ -41,7 +41,8 @@ let config = {
             //         // https://github.com/kangax/html-minifier#options-quick-reference
             // },
             // necessary to consistently work with multiple chunks via CommonsChunkPlugin
-            chunksSortMode: 'dependency'
+            chunksSortMode: 'dependency',
+            manifestPath : defaultSettings.publicPath
         }),
         // new webpack.optimize.UglifyJsPlugin(),
         // new webpack.optimize.OccurenceOrderPlugin(),

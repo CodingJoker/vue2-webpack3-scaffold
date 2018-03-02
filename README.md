@@ -5,9 +5,7 @@
 
 拉取代码
 
-    git init ;
-    git remote add origin https://github.com/CodingJoker/vue2-webpack3-scaffold.git
-    git pull origin master;
+    git clone https://github.com/CodingJoker/vue2-webpack3-scaffold.git
 
 安装相应的工具
 > [yarn](https://yarnpkg.com/zh-Hans/) 安装 , 不安装也可以进行下一步
