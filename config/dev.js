@@ -4,7 +4,8 @@ let path = require('path');
 let webpack = require('webpack');
 let baseConfig = require('./base');
 let defaultSettings = require('./default');
-let HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const LodashModuleReplacementPlugin = require('lodash-webpack-plugin');
 let config = Object.assign({}, baseConfig, {
     devtool: 'eval-source-map',
     output: {
@@ -20,6 +21,9 @@ let config = Object.assign({}, baseConfig, {
             VueRouter: 'vue-router',
             $: "jquery",
             jQuery: "jquery"
+        }),
+        new LodashModuleReplacementPlugin({
+            shorthands : true
         }),
         new HtmlWebpackPlugin({
             filename:  'index.html',

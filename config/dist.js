@@ -8,6 +8,7 @@ const defaultSettings = require('./default');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const AppCachePlugin = require('appcache-webpack-plugin');
+const LodashModuleReplacementPlugin = require('lodash-webpack-plugin');
 //编译之前删除build文件夹
 shell.rm('-rf' , defaultSettings.buildPath);
 
@@ -27,6 +28,10 @@ let config = {
         new webpack.optimize.CommonsChunkPlugin({
             name:'vendor',
             chunks: ['main','vendor']
+        }),
+        // 缩小lodash的大小
+        new LodashModuleReplacementPlugin({
+            shorthands : true
         }),
         //打包html 添加入口script到index.html中
         new HtmlWebpackPlugin({
